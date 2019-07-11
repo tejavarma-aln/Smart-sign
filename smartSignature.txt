@@ -1,0 +1,38 @@
+ 
+	;;;;;;;;;;;;;;invoice part;;;;;;;;;;;;;;;;;;;;
+	
+[System:Formulae]
+	SmartImgpath:"smart_sign.jpg"
+		
+[#Part: EXPINV RightSign]
+		Delete:Bottom Part:Expinv Signature
+		Add:Bottom Part:At End:SmartSignPart
+		
+[Part:SmartSignPart]
+	  Part:SmartSignpart1,SmartSignpart2,Smartsignpart3
+			Vertical:Yes
+			Border:thintopleft
+	
+	[Part:SmartSignpart2]
+   Graph Type:@@SmartImgpath
+			Line:EXpInvLogo
+			Height:4
+			Horizontal Alignment:Right
+			
+[Part:SmartSignpart1]
+	Line:SmartSignCompany
+			
+[Line:SmartSignCompany]
+	Field:NameField
+	Local:Field:NameField:Set as:$$LocaleString:"For" + " " + @@CMPMailName
+	Local:Field:NameField:Full Width:Yes
+	Local:Field:NameField:Align:Right
+	
+[Part:Smartsignpart3]
+	Line:Smartsignpart3
+			
+[Line:Smartsignpart3]
+	Field:NameField
+	Local:Field:NameField:Set as:$$LocaleString:"Authorized Singnatory"
+	Local:Field:NameField:Full Width:Yes
+	Local:Field:NameField:Align:Right
