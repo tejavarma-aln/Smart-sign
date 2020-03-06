@@ -1,0 +1,21 @@
+﻿<Window x:Name="SmartSign" x:Class="SmartSign.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SmartSign"
+        mc:Ignorable="d"
+        Title="Smart-Signature" Height="450" Width="800" Loaded="set_ui" FontFamily="roboto" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="icons_e-signature.png">
+
+    <Grid>    
+  <Canvas Name="paint_dock"  MouseMove="Paint_dock_MouseMove" Height="300" VerticalAlignment="Top" MouseUp="Paint_dock_MouseUp" Background="White" MouseDown="Paint_dock_MouseDown">
+  </Canvas>
+        <StackPanel Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="0,300,0,0" Width="auto" Height="auto" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom">
+            <Label Name="ind_label" HorizontalAlignment="Center" Margin="0,5,0,0" FontSize="16">Draw your signature on the above region, align to center for better rendering</Label>
+            <DockPanel HorizontalAlignment="Center" Margin="5">
+                <Button Name="clr_bt" FontSize="20" Click="Clr_bt_Click" Content="Clear" Height="50" Width="150" Padding="10" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" Foreground="White"></Button>
+                <Button Name="save_bt" FontSize="20" Click="Save_bt_Click" Margin="10" Content="Save" Height="50" Width="150" Padding="10" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" Foreground="White" ></Button>
+            </DockPanel>
+        </StackPanel> 
+    </Grid>     
+</Window>
