@@ -13,13 +13,13 @@
 
 **Get Started**
 
-1)Download required files(smartSignature.txt ans smartsign.exe)
+1)Download required files(smartSignature.txt ans SmartSign.exe)
 
 2)Place all the files in tally working directory
 
 3)Load the |smartSignature.txt|  file in tally as normal TDL
 
-4)Run |Smartsign.exe|  Application and sign with mouse then click save button 
+4)Run |SmartSign.exe|  Application and sign with mouse then click save button 
 
 5)Singurate will be saved as an image in the application folder
 
